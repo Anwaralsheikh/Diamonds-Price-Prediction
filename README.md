@@ -5,13 +5,13 @@ This project demonstrates the complete data science pipeline — from **data cle
 
 ---
 
-## 🧠 Project Overview
+##  Project Overview
 Diamonds vary widely in price depending on their characteristics.  
 The goal of this project is to **build a regression model** that accurately predicts a diamond’s price given its features.
 
 ---
 
-## 📊 Dataset
+##  Dataset
 - **Source:** [Kaggle - Diamonds Dataset](https://www.kaggle.com/datasets/shivam2503/diamonds)
 - **Size:** ~54,000 records
 - **Features:**
@@ -25,11 +25,11 @@ The goal of this project is to **build a regression model** that accurately pred
 
 ---
 
-## ⚙️ Project Workflow
+##  Project Workflow
 
 1. **Data Loading and Cleaning**
    - Handle missing values (if any)
-   - Remove outliers (e.g., extreme carat/price values)
+   - Remove outliers 
    - Check for data consistency
 
 2. **Exploratory Data Analysis (EDA)**
@@ -40,13 +40,19 @@ The goal of this project is to **build a regression model** that accurately pred
 3. **Feature Engineering**
    - Encoding categorical features (Cut, Color, Clarity)
    - Feature scaling (StandardScaler / MinMaxScaler)
-   - Creating new features such as *price per carat*
+   - Creating new features such as volume = x * y * z
 
 4. **Model Training**
    - Models tested:
      - Linear Regression
      - Random Forest Regressor
      - XGBoost Regressor
+     - Ridge Regression
+     - Lasso Regression
+     - Gradient Boosting
+     - Decision Tree
+     - Support Vector Regression (SVR)
+
    - Hyperparameter tuning using GridSearchCV
 
 5. **Model Evaluation**
@@ -65,11 +71,16 @@ The goal of this project is to **build a regression model** that accurately pred
 ## 📈 Results
 | Model | MAE | RMSE | R² |
 |--------|-----|------|----|
-| Linear Regression | — | — | — |
-| Random Forest | — | — | — |
-| XGBoost | — | — | — |
+| XGBoost | 134544.187500 | 366.802655 |0.980272 |
+| Random Forest | 139550.757377 | 373.564931 | 0.979537 |
+| Decision Tree | 232311.169679| 481.986690 | 0.965936|
+| Gradient Boosting | 305716.417029 | 552.916284| 0.955172|
+| SVR | 336387.855839 | 579.989531 | 0.950675 |
+| Linear Regression | 513955.377862 | 716.906813 | 0.924638 |
+| Ridge Regression | 514273.702109 | 717.128790| 0.924591|
+| Lasso Regression | 514830.097745 | 717.516618| 0.924509|
 
-👉 *(Fill in with your actual results once you run the models)*
+
 
 Key insights:
 - **Carat weight** is the most significant predictor of price.
@@ -78,7 +89,7 @@ Key insights:
 
 ---
 
-## 🧩 Requirements
+##  Requirements
 
 To install required libraries:
 
